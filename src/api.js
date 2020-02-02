@@ -1,5 +1,9 @@
 const express = require('express');
 const serverless = require('serverless-http')
+const Datastore = require('nedb');
+app.use(express.static('public'));
+const database= newDatastore('database.db');
+database.loadDatabase();
 
 const app = express();
 
