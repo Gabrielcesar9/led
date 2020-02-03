@@ -4,7 +4,7 @@ Airtable.configure({
     endpointUrl:'http://api.airtable.com',
     apiKey: process.env.API_KEY
 })
-const base = AIRtable.base('app1ANJMB2FcVdb5o')
+const base = Airtable.base('app1ANJMB2FcVdb5o')
 
 exports.handler = function(event, context, callback){
     callback(null, {
