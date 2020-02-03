@@ -3,16 +3,14 @@ const serverless = require('serverless-http')
 const Airtable = require('airtable');
 /** THIS IS YOUR SERVERLESS FUNCTION */
 exports.handler = function(event, context, callback) {
-    console.log('at least here is working')
     //pull the required information from your environment variables, which can be set in the Netlify UI
     const {API_URL, API_CLIENT_ID, API_KEY } = process.env;
   
     // THIS FUNCTION FORMATS AND SENDS YOUR RESPONSE BACK TO YOUR FRONT-END
-    const send = body => {
-      callback(null, {
+    callback(null, {
         statusCode: 200,
-        body: JSON.stringify(body)
-      });
+        body:JSON.stringify({msg:'Hello Brad'})
+    });
     }
   
     // CONFIGURE YOUR AIRTABLE BASE CONNECTION
