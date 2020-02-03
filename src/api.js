@@ -12,7 +12,7 @@ base('Table 1').find('recRswfevsMQarIVS', function(err, record) {
     if (err) { console.error(err); return; }
     console.log('Retrieved', record.id);
 });
-
+console.log('log is working');
 const app = express();
 
 const router = express.Router();
