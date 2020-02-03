@@ -23,4 +23,4 @@ router.get('/api', (req, res) => {
 app.use('/.netlify/functions/api', router);
 
 module.exports.handler = serverless(app);
-module.exports.handler = serverless(Airtable);
+//module.exports.handler = serverless(Airtable);
