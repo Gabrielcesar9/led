@@ -6,10 +6,17 @@ Airtable.configure({
 })
 const base = Airtable.base('app1ANJMB2FcVdb5o')
 
+
 exports.handler = function(event, context, callback){
+    const allRecords = []
+    base('Table 1').find('recRswfevsMQarIVS', function(err, record) {
+        allRecords.push(record)
+        }
+    )
+
     callback(null, {
         statusCode:200,
-        body: (console.log('this is pau'))
+        body: (JSON.stringify({records:allRecords}))
     });
 }
 const app = express();
