@@ -1,6 +1,6 @@
 const express = require('express');
 exports.handler = function(event, context, callback){
-    callbackl(null, {
+    callback(null, {
         statusCode:200,
         body: 'Hello World'
     });
