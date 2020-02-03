@@ -29,7 +29,8 @@ exports.handler = function(event, context, callback) {
       COMMON CRUD OPERATIONS
     */
    base('Table 1').find('recRswfevsMQarIVS', function(err, record) {
-    if (err) { console.error(err); return; }
+    if (err) { console.error(err);
+        console.log('sapoha deu erro'); return; }
     console.log('Retrieved', record.id);
 });
   
