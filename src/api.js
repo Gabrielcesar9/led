@@ -48,6 +48,10 @@ base('Table 1').find('recRswfevsMQarIVS', function(err, record) {
     if (err) { console.error(err); return; }
     console.log('Retrieved', record.id);
 });
+
+
+
+module.exports.handler = serverless(Airtable)*/
 console.log('loglog is working');
 const app = express();
 
@@ -56,8 +60,5 @@ const router = express.Router();
 router.get('/api', (req, res) => {
     res.json({'hello':'hi!'});
 });
-
-
-module.exports.handler = serverless(Airtable)*/
 app.use('/.netlify/functions/api', router);
 module.exports.handler = serverless(app)
