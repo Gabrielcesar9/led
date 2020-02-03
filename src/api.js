@@ -34,7 +34,7 @@ exports.handler = function(event, context, callback) {
 });
   
     send(data);
-  }
+  
 
 //const Datastore = require('nedb');
 //app.use(express.static('public'));
