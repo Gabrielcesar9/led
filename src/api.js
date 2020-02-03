@@ -1,9 +1,17 @@
 const express = require('express');
 const serverless = require('serverless-http')
-const Datastore = require('nedb');
-app.use(express.static('public'));
-const database= new Datastore('database.db');
-database.loadDatabase();
+//const Datastore = require('nedb');
+//app.use(express.static('public'));
+//const database= new Datastore('database.db');
+//database.loadDatabase();
+
+var Airtable = require('airtable');
+var base = new Airtable({apiKey:'keyFqKmXCtU2IkZGw'}).base('app1ANJMB2FcVdb5o');
+
+base('Table 1').find('recRswfevsMQarIVS', function(err, record) {
+    if (err) { console.error(err); return; }
+    console.log('Retrieved', record.id);
+});
 
 const app = express();
 
