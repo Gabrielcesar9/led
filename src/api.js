@@ -33,7 +33,7 @@ exports.handler = function(event, context, callback) {
         if (err) {
           callback(err)
         } else {
-          const body = JSON.parse(allRecords)
+          const body = JSON.stringify({ records: allRecords })
           const response = {
             statusCode: 200,
             body: body,
