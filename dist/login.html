@@ -1,0 +1,19 @@
+<!DOCTYPE html> 
+<script>
+    fetch('https://flyenglish-mg.netlify.com/.netlify/functions/api')
+  .then(response => {console.log(response);
+  return response.json();}).then(data => {
+    const val = data.records;
+    console.log(val);
+    console.log(typeof val);
+    console.log(val[0].id);
+    ioi = val[0].id
+    return ioi;}).then(id =>{
+      document.getElementById("para").innerHTML = id;
+    })
+  .catch(error => console.log(error)) 
+</script>
+
+<h1>This is a database</h1>
+<body>This is the body</body>
+<p id="para">testing</p>
