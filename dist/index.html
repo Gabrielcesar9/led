@@ -1,7 +1,10 @@
 <!DOCTYPE html> 
 <script>
     fetch('https://clever-heisenberg-962b48.netlify.com/.netlify/functions/api')
-  .then(response => console.log(response))
+  .then(response => {console.log(response);
+  return response.json();}).then(data => {
+    console.log(data)
+  })
   .catch(error => console.log(error)) 
 </script>
 
