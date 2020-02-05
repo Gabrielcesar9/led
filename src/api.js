@@ -1,6 +1,15 @@
 const express = require('express');
+const app = express();
+app.all("/", function(req, res, next) {
+  req.header("Origin", "*"); // ideally the '*' will be your hostname
+  return next();
+});
+
+
 const serverless = require('serverless-http');
-const Airtable = require('airtable')
+const Airtable = require('airtable');
+
+
 /*Airtable.configure({
     endpointUrl:'http://api.airtable.com',
     apiKey: 'keyFqKmXCtU2IkZGw'
@@ -10,12 +19,12 @@ var Airtable = require('airtable');
 var base = new Airtable({apiKey: 'keyFqKmXCtU2IkZGw'}).base('app1ANJMB2FcVdb5o');*/
 
 exports.handler = function(event, context, callback) {
-    const {API_URL, API_CLIENT_ID, API_KEY } = process.env;
+    //const {API_URL, API_CLIENT_ID, API_KEY } = process.env;
     Airtable.configure({
-    endpointUrl:API_URL,
-    apiKey: API_KEY
+    endpointUrl:'http://api.airtable.com',//API_URL,
+    apiKey:'keyFqKmXCtU2IkZGw' //API_KEY
 })
-    var base = Airtable.base(API_CLIENT_ID);
+    var base = Airtable.base('app1ANJMB2FcVdb5o');//(API_CLIENT_ID);
     const allRecords = []
     base('Table 1')
     .select({
@@ -48,8 +57,6 @@ exports.handler = function(event, context, callback) {
     )
       
   }
-const app = express();
 
-const router = express.Router();
-app.use('/.netlify/functions/api', router);
-
+//const router = express.Router();
+//app.use('/.netlify/functions/api', router);
