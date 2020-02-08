@@ -2,7 +2,7 @@
 <head>
   <script>
     function details(user){
-      window.location = 'http://127.0.0.1:5500/dist/login.html';
+      window.location = 'https://flyenglish-mg.netlify.com/login.html';
     }
     function myFunction(){ 
       event.preventDefault();
@@ -17,7 +17,8 @@
     "password": document.getElementById("pass").value,
   })
 }
-      ).then(response => {console.log(response)})}  
+      ).then(response => {console.log(response); return(response.json())})
+    .then(res => {console.log('res', res)})}  
     </script>
 </head>
 <body>
