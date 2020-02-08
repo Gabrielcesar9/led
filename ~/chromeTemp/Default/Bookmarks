@@ -1,0 +1,54 @@
+{
+   "checksum": "31f04e1530fb72be08cdee7db6ea0a8c",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13225587912017895",
+            "guid": "d526156e-3804-4796-a64d-ee1f66032037",
+            "id": "5",
+            "name": "Gmail",
+            "type": "url",
+            "url": "https://accounts.google.com/b/0/AddMailService"
+         }, {
+            "date_added": "13225587912085925",
+            "guid": "fe20671f-3322-45ef-b46e-5da60cd7ac90",
+            "id": "6",
+            "name": "YouTube",
+            "type": "url",
+            "url": "https://youtube.com/"
+         }, {
+            "date_added": "13225587912086937",
+            "guid": "d213ce23-5789-45b5-bda2-6ca28d6698b6",
+            "id": "7",
+            "name": "Maps",
+            "type": "url",
+            "url": "https://maps.google.com/"
+         } ],
+         "date_added": "13225587889349055",
+         "date_modified": "13225587912086937",
+         "guid": "00000000-0000-4000-A000-000000000002",
+         "id": "1",
+         "name": "Barra de favoritos",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13225587889349064",
+         "date_modified": "0",
+         "guid": "00000000-0000-4000-A000-000000000003",
+         "id": "2",
+         "name": "Outros favoritos",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13225587889349065",
+         "date_modified": "0",
+         "guid": "00000000-0000-4000-A000-000000000004",
+         "id": "3",
+         "name": "Favoritos de dispositivos móveis",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

@@ -12,9 +12,11 @@
   "license": "ISC",
   "dependencies": {
     "airtable": "^0.8.1",
+    "autoreload": "0.0.7",
     "express": "^4.17.1",
     "nedb": "^1.8.0",
     "netlify-lambda": "^1.6.3",
-    "serverless-http": "^2.3.1"
+    "serverless-http": "^2.3.1",
+    "simple-autoreload-server": "^0.2.7"
   }
 }
